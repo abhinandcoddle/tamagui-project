@@ -9,6 +9,13 @@ export const styles = StyleSheet.create({
   },
 });
 
+export default StyleSheet.create({
+  Container: {
+    marginHorizontal: 20,
+    backgroundColor: 'blue'
+  }
+});
+
 export const Container = styled(Stack, {
   flex: 1,
 });
