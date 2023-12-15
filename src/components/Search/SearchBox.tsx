@@ -2,26 +2,28 @@ import React from 'react';
 import {Input, XStack} from 'tamagui';
 import Search from '../../assets/images/search';
 import BackIcon from '../../assets/images/back';
+import {useNavigation} from '@react-navigation/native';
+import SearchBoxStyles from './SearchBoxStyles';
 import {Dimensions} from 'react-native';
 
 const SearchBox = () => {
   const windowWidth = Dimensions.get('window').width - 105;
+  const navigation = useNavigation();
 
   return (
-    <XStack ai="center" paddingVertical={12} width={windowWidth}>
-      <XStack paddingVertical={8}>
+    <XStack style={SearchBoxStyles.searchStack} width={windowWidth}>
+      <XStack
+        style={SearchBoxStyles.backIconStack}
+        onPress={() => navigation.navigate('Home')}>
         <BackIcon />
       </XStack>
-      <XStack
-        borderWidth={1}
-        borderRadius={30}
-        borderBlockColor="#424548"
-        ai="center"
-        ml={32}
-        paddingHorizontal={16}
-        width="100%">
+      <XStack style={SearchBoxStyles.inputStack}>
         <Search />
-        <Input height={44} ml={8} bg="transparent" bw={0} width="96%" />
+        <Input
+          placeholder="Search"
+          style={SearchBoxStyles.inputContent}
+          bw={0}
+        />
       </XStack>
     </XStack>
   );

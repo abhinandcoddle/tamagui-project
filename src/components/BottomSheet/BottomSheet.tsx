@@ -1,6 +1,5 @@
 import React from 'react';
 import {ScrollView, Sheet} from 'tamagui';
-import {HeaderText} from '../HeaderText/HeaderText';
 type PropsType = {
   open?: boolean;
   setOpen?: any;
@@ -37,7 +36,6 @@ export const BottomSheet = (props: PropsType) => {
           justifyContent="center"
           alignItems="center"
           paddingVertical={20}>
-          <HeaderText title={props.title} />
           {props.children}
         </Sheet.Frame>
       </ScrollView>
