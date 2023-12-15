@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
 export default StyleSheet.create({
-  checkBoxStyle : {
+  checkBoxStyle: {
     backgroundColor: '#fff',
     color: '#000',
   },

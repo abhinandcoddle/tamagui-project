@@ -1,3 +1,4 @@
+import React from 'react';
 import {Checkbox, Label, XStack, Text} from 'tamagui';
 import styles from './CheckboxStyles';
 

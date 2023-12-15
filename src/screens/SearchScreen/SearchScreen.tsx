@@ -2,7 +2,7 @@ import React from 'react';
 import {useNavigation} from '@react-navigation/native';
 import {Container, styles} from '../../themeConfig/GlobalStyles';
 import {HeaderText} from '../../components/HeaderText/HeaderText';
-import {PrimaryButton} from '../../components/Buttons/Buttons';
+import Button from '../../components/Button/Button';
 
 const SearchScreen = () => {
   const navigation = useNavigation();
@@ -10,7 +10,7 @@ const SearchScreen = () => {
   return (
     <Container automaticallyAdjustKeyboardInsets>
       <HeaderText title="Search Page" size={18} />
-      <PrimaryButton
+      <Button
         label="Go Back to Home Screen"
         color="white"
         size={16}

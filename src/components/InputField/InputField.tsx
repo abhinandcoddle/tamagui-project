@@ -1,3 +1,4 @@
+import React from 'react';
 import {Input} from 'tamagui';
 import styles from './InputStyles';
 

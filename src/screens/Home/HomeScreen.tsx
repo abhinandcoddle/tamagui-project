@@ -5,7 +5,7 @@ import {Check} from '@tamagui/lucide-icons';
 import {useNavigation} from '@react-navigation/native';
 
 import {BottomSheet} from '../../components/BottomSheet/BottomSheet';
-import {PrimaryButton} from '../../components/Buttons/Buttons';
+import Button from '../../components/Button/Button';
 import {HeaderText} from '../../components/HeaderText/HeaderText';
 
 export default function HomeScreen() {
@@ -16,7 +16,7 @@ export default function HomeScreen() {
     <>
       <Container automaticallyAdjustKeyboardInsets>
         <HeaderText title="Home Page" size={18} />
-        <PrimaryButton
+        <Button
           label="Open Bottom Sheet"
           color="white"
           size={16}
@@ -24,7 +24,7 @@ export default function HomeScreen() {
           onClick={() => setOpen(true)}
           style={styles.primaryButton}
         />
-        <PrimaryButton
+        <Button
           label="Open Search Screen"
           color="white"
           size={16}
