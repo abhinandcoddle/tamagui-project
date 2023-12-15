@@ -6,8 +6,6 @@ import {useNavigation} from '@react-navigation/native';
 import {BottomSheet} from '../../components/BottomSheet/BottomSheet';
 import Button from '../../components/Button/Button';
 import {HeaderText} from '../../components/HeaderText/HeaderText';
-import Checkbox from '../../components/Checkbox/Checkbox';
-import InputField from '../../components/InputField/InputField';
 
 export default function HomeScreen() {
   const [open, setOpen] = useState(false);
@@ -32,9 +30,6 @@ export default function HomeScreen() {
           bgColor="#23a1a1"
           onClick={() => navigation.navigate('Search')}
         />
-
-        <Checkbox />
-        <InputField placeholder="Username" />
       </Container>
 
       <BottomSheet open={open} setOpen={setOpen} title="Your Teams">

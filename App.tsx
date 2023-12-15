@@ -21,7 +21,7 @@ export default function App() {
             backgroundColor="transparent"
           />
           <Stack.Navigator
-            initialRouteName="Home"
+            initialRouteName="Search"
             screenOptions={{
               headerShown: false,
             }}>
