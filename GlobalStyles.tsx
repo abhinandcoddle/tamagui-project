@@ -1,44 +1,37 @@
 import {StyleSheet} from 'react-native';
-import {Button, Input, Stack, Text, styled, ScrollView} from 'tamagui';
+import {Stack, Text, styled} from 'tamagui';
 import {tokens} from './tamagui.config';
 
 export const styles = StyleSheet.create({
   safeAreaView: {
     flex: 1,
+    padding: 10,
   },
 });
 
-export const Container = styled(ScrollView, {
-  flex: 1,
-  pt: '12%',
+export default StyleSheet.create({
+  Container: {
+    marginHorizontal: 20,
+    backgroundColor: 'blue',
+  },
 });
-export const SubContainer = styled(Stack, {
-  width: '100%',
-  alignItems: 'center',
+
+export const Container = styled(Stack, {
+  flex: 1,
 });
 
 export const HeaderText = styled(Text, {
-  ta: 'center',
   variants: {
     size: {
-      xsm: {fontSize: tokens.font.xsm},
-      ysm: {fontSize: tokens.font.ysm},
-      sm: {fontSize: tokens.font.sm},
-      md: {fontSize: tokens.font.md},
-      lg: {fontSize: tokens.font.lg},
+      sm: {
+        fontSize: tokens.font.sm,
+      },
+      md: {
+        fontSize: tokens.font.md,
+      },
+      lg: {
+        fontSize: tokens.font.lg,
+      },
     },
   },
-});
-
-export const InputText = styled(Input, {
-  width: '90%',
-  height: '$5',
-  mb: 15,
-  fontSize: '$6',
-});
-
-export const SubmitButton = styled(Button, {
-  width: '90%',
-  color: 'white',
-  fontSize: '$6',
 });
