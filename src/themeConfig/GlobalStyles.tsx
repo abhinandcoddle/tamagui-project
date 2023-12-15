@@ -12,5 +12,6 @@ export const styles = StyleSheet.create({
 
 export const Container = styled(ScrollView, {
   flex: 1,
-  marginTop: Platform.OS === 'android' ? 15 : 0,
+  paddingHorizontal: 24,
+  marginTop: Platform.OS === 'android' ? 20 : 0,
 });
