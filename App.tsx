@@ -1,5 +1,5 @@
 import React from 'react';
-import {TamaguiProvider, Theme} from 'tamagui';
+import {TamaguiProvider, Theme, RadioGroup, YStack, XStack} from 'tamagui';
 import config from './tamagui.config';
 import {Container, HeaderText, styles} from './GlobalStyles';
 
@@ -9,6 +9,8 @@ import GlobalStyles from './GlobalStyles';
 import InputField from './src/components/InputField/InputField';
 import TextArea from './src/components/TextArea/TextArea';
 import Checkbox from './src/components/Checkbox/Checkbox';
+import RadioButton from './src/components/Radio/RadioButton';
+import Card from './src/components/Card/Card';
 
 export default function App() {
   return (
@@ -21,9 +23,23 @@ export default function App() {
           <InputField placeholder={'Full Name'} />
           <TextArea placeholder={'Enter your details...'} />
 
-          <Checkbox label={'Accept terms and conditions'}/>
+          <Checkbox label={'Accept terms and conditions'} />
 
+          <RadioGroup
+            aria-labelledby="Select one item"
+            defaultValue="3"
+            name="form">
+            <YStack width={300} alignItems="center" space="$2">
+              <RadioButton value={'2'} label={'Second value'} />
+              <RadioButton value={'3'} label={'Third value'} />
+            </YStack>
+          </RadioGroup>
+
+          <XStack $sm={{flexDirection: 'column'}}>
+            <Card width={250} height={300} />
+          </XStack>
         </Container>
+
         <Button
           variant={''}
           color={'#fff'}
