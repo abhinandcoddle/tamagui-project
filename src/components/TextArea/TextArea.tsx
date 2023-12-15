@@ -1,3 +1,4 @@
+import React from 'react';
 import {TextArea} from 'tamagui';
 import styles from './TextAreaStyles';
 

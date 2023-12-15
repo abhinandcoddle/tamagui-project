@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
-import {Checkbox, Text} from 'tamagui';
+import {Text} from 'tamagui';
 import {Container, styles} from '../../themeConfig/GlobalStyles';
-import {Check} from '@tamagui/lucide-icons';
 import {useNavigation} from '@react-navigation/native';
 
 import {BottomSheet} from '../../components/BottomSheet/BottomSheet';
 import Button from '../../components/Button/Button';
 import {HeaderText} from '../../components/HeaderText/HeaderText';
+import Checkbox from '../../components/Checkbox/Checkbox';
+import InputField from '../../components/InputField/InputField';
 
 export default function HomeScreen() {
   const [open, setOpen] = useState(false);
@@ -31,11 +32,9 @@ export default function HomeScreen() {
           bgColor="#23a1a1"
           onClick={() => navigation.navigate('Search')}
         />
-        <Checkbox>
-          <Checkbox.Indicator>
-            <Check />
-          </Checkbox.Indicator>
-        </Checkbox>
+
+        <Checkbox />
+        <InputField placeholder="Username" />
       </Container>
 
       <BottomSheet open={open} setOpen={setOpen} title="Your Teams">
