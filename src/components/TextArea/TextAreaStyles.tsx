@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
 export default StyleSheet.create({
-  inputStyle : {
+  textAreaStyle : {
     backgroundColor: '#fff',
     color: '#000',
   }
