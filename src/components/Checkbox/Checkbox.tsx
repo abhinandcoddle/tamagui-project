@@ -10,7 +10,7 @@ export default (props: PropsType) => (
   <XStack width={300} alignItems="center" space="$2.5">
     <Checkbox size="$3.5" borderRadius="$1">
       <Checkbox.Indicator alignItems="center" justifyContent="center">
-        {/* <CheckIcons/> */}
+        {/* <CheckIcons /> */}
         <Text>*</Text>
       </Checkbox.Indicator>
     </Checkbox>

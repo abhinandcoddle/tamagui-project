@@ -2,7 +2,7 @@ import {Button, Theme} from 'tamagui';
 import styles from './ButtonStyles';
 
 type PropsType = {
-  variant?: string;
+  variant?: any;
   color?: string;
   background?: string;
   title?: string;

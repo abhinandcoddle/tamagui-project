@@ -2,7 +2,7 @@ import {RadioGroup, Label, XStack} from 'tamagui';
 import styles from './RadioStyles';
 
 type PropsType = {
-  value?: string;
+  value?: any;
   label?: string;
 };
 
@@ -11,7 +11,7 @@ export default (props: PropsType) => (
     <RadioGroup.Item size="$3" value={props.value} >
       <RadioGroup.Indicator  scale="$-0.75"/>
     </RadioGroup.Item>
-
+    
     <Label>
       {props.label}
     </Label>
