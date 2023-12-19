@@ -1,5 +1,5 @@
 import React from 'react';
-import {TamaguiProvider, Theme, RadioGroup, YStack, XStack} from 'tamagui';
+import {TamaguiProvider, Theme, RadioGroup, YStack, XStack, Progress, Spinner} from 'tamagui';
 import config from './tamagui.config';
 import {Container, HeaderText, styles} from './GlobalStyles';
 
@@ -11,6 +11,10 @@ import TextArea from './src/components/TextArea/TextArea';
 import Checkbox from './src/components/Checkbox/Checkbox';
 import RadioButton from './src/components/Radio/RadioButton';
 import Card from './src/components/Card/Card';
+import {SwitchWithLabel} from './src/components/Switch/Switch';
+import ProgressBar from './src/components/ProgressBar/ProgressBar';
+import { AlertBox } from './src/components/AlertBox/AlertBox';
+import { AccordionSet } from './src/components/Accordion/Accordion';
 
 export default function App() {
   return (
@@ -35,9 +39,20 @@ export default function App() {
             </YStack>
           </RadioGroup>
 
-          <XStack $sm={{flexDirection: 'column'}}>
+          {/* <XStack $sm={{flexDirection: 'column'}}>
             <Card width={250} height={300} />
-          </XStack>
+          </XStack> */}
+
+          <YStack width={200} alignItems="center" space="$3">
+            <XStack space="$3" $xs={{flexDirection: 'column'}}>
+              <SwitchWithLabel size="$2" defaultChecked />
+            </XStack>
+          </YStack>
+          <ProgressBar/>
+          {/* <AlertBox /> */}
+          <AccordionSet />
+          <Spinner />
+
         </Container>
 
         <Button
