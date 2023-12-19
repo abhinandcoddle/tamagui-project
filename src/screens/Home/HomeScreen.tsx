@@ -3,7 +3,6 @@ import {Text} from 'tamagui';
 import {Container, styles} from '../../themeConfig/GlobalStyles';
 import {useNavigation} from '@react-navigation/native';
 import HomeStyles from './HomeStyles';
-
 import {BottomSheet} from '../../components/BottomSheet/BottomSheet';
 import Button from '../../components/Button/Button';
 

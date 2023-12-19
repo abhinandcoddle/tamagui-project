@@ -1,4 +1,4 @@
-import {Platform, StyleSheet} from 'react-native';
+import {StyleSheet} from 'react-native';
 import {styled, ScrollView} from 'tamagui';
 
 export const styles = StyleSheet.create({
@@ -13,5 +13,5 @@ export const styles = StyleSheet.create({
 export const Container = styled(ScrollView, {
   flex: 1,
   paddingHorizontal: 24,
-  marginTop: Platform.OS === 'android' ? 20 : 0,
+  marginTop: 25,
 });
