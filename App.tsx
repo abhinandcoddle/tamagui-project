@@ -1,7 +1,7 @@
 import React from 'react';
 import config from './tamagui.config';
 import {TamaguiProvider} from 'tamagui';
-import {StatusBar, SafeAreaView} from 'react-native';
+import {StatusBar, View} from 'react-native';
 import {styles} from './src/themeConfig/GlobalStyles';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
@@ -14,7 +14,7 @@ export default function App() {
   return (
     <TamaguiProvider config={config}>
       <NavigationContainer>
-        <SafeAreaView style={styles.safeAreaView}>
+        <View style={styles.safeAreaView}>
           <StatusBar
             barStyle="dark-content"
             translucent
@@ -28,7 +28,7 @@ export default function App() {
             <Stack.Screen name="Home" component={HomeScreen} />
             <Stack.Screen name="Search" component={SearchScreen} />
           </Stack.Navigator>
-        </SafeAreaView>
+        </View>
       </NavigationContainer>
     </TamaguiProvider>
   );
