@@ -6,12 +6,12 @@ export const styles = StyleSheet.create({
     flex: 1,
   },
   primaryButton: {
-    marginBottom: 10,
+    marginVertical: 5,
   },
 });
 
 export const Container = styled(ScrollView, {
   flex: 1,
   paddingHorizontal: 24,
-  marginTop: 25,
+  marginTop: 15,
 });
