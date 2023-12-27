@@ -1,17 +1,18 @@
 import React from 'react';
 import {Input} from 'tamagui';
-import styles from './InputStyles';
 
 type PropsType = {
-  placeholder?: string;
+  label?: string;
+  style?: any;
+  size?: any;
+  pColor?: any;
 };
 
 export default (props: PropsType) => (
   <Input
-    size="$4"
-    borderWidth={1}
-    borderRadius="$3"
-    placeholder={props.placeholder}
-    style={styles.inputStyle}
+    fontSize={props.size}
+    placeholder={props.label}
+    style={props.style}
+    placeholderTextColor={props.pColor}
   />
 );
