@@ -1,4 +1,3 @@
-import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import Svg, {Path} from 'react-native-svg';
 
@@ -32,5 +31,3 @@ const CheckIcons = () => {
 };
 
 export default CheckIcons;
-
-const styles = StyleSheet.create({});

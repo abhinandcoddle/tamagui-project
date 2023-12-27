@@ -4,7 +4,7 @@ import {Container, styles} from '../../themeConfig/GlobalStyles';
 import {useNavigation} from '@react-navigation/native';
 import HomeStyles from './HomeStyles';
 import {BottomSheet} from '../../components/BottomSheet/BottomSheet';
-import Button from '../../components/Button/Button';
+import {Buttons} from '../../components/Button/Button';
 import Header from '../../components/Header/Header';
 
 export default function HomeScreen() {
@@ -22,7 +22,7 @@ export default function HomeScreen() {
           icon1={'Notification'}
           icon2={'More'}
         />
-        <Button
+        <Buttons
           label="Open Bottom Sheet"
           color="white"
           size={16}
@@ -30,7 +30,7 @@ export default function HomeScreen() {
           onClick={() => setOpen(true)}
           style={styles.primaryButton}
         />
-        <Button
+        <Buttons
           label="Open Search Screen"
           color="white"
           size={16}
@@ -38,7 +38,7 @@ export default function HomeScreen() {
           style={styles.primaryButton}
           onClick={() => navigation.navigate('Search')}
         />
-        <Button
+        <Buttons
           label="Open Testing Screen"
           color="white"
           size={16}

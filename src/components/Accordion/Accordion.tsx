@@ -1,13 +1,12 @@
-// import {ChevronDown} from '@tamagui/lucide-icons';
-
-import {Accordion, Paragraph, Square, Text} from 'tamagui';
+import React from 'react';
+import {Accordion, Paragraph, Square} from 'tamagui';
 
 export function AccordionSet() {
   return (
     <Accordion overflow="hidden" width="100%" type="multiple">
       <Accordion.Item value="a1">
         <Accordion.Trigger flexDirection="row" justifyContent="space-between">
-          {({open}:any) => (
+          {({open}: any) => (
             <>
               <Paragraph>1. Take a cold shower</Paragraph>
 
@@ -28,7 +27,7 @@ export function AccordionSet() {
       </Accordion.Item>
       <Accordion.Item value="a2">
         <Accordion.Trigger flexDirection="row" justifyContent="space-between">
-          {({open}:any) => (
+          {({open}: any) => (
             <>
               <Paragraph>2. Eat 4 eggs</Paragraph>
 

@@ -22,7 +22,7 @@ export default function App() {
             <StatusBar
               barStyle="dark-content"
               translucent
-              backgroundColor="transparent"
+              backgroundColor="white"
             />
             <Stack.Navigator
               initialRouteName="Login"

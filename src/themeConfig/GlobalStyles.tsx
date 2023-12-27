@@ -11,7 +11,5 @@ export const styles = StyleSheet.create({
 });
 
 export const Container = styled(ScrollView, {
-  flex: 1,
-  paddingHorizontal: 24,
-  marginTop: 15,
+  backgroundColor: 'white',
 });

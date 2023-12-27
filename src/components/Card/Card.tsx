@@ -1,5 +1,5 @@
-import {Card, XStack, Paragraph, Image, Button, H3} from 'tamagui';
-import styles from './CardStyles';
+import React from 'react';
+import {Card, XStack, Paragraph, Button, H3} from 'tamagui';
 
 type PropsType = {
   value?: string;

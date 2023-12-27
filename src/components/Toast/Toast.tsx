@@ -1,6 +1,6 @@
 import {Toast, useToastController, useToastState} from '@tamagui/toast';
 import React from 'react';
-import Button from '../Button/Button';
+import {Buttons} from '../Button/Button';
 import {XStack, YStack} from 'tamagui';
 import {styles} from '../../themeConfig/GlobalStyles';
 /**
@@ -47,7 +47,7 @@ const ToastControl = ({native}: {native: boolean}) => {
 
   return (
     <XStack space="$2" justifyContent="center">
-      <Button
+      <Buttons
         label="Show Toast"
         color="white"
         size={16}
