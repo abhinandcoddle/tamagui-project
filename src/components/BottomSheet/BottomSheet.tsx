@@ -1,6 +1,7 @@
 import React from 'react';
 import {ScrollView, Sheet} from 'tamagui';
 import BottomSheetHeader from './BottomSheetHeader';
+import styles from './BottomSheetStyles';
 type PropsType = {
   open?: boolean;
   setOpen?: any;
@@ -22,17 +23,10 @@ export const BottomSheet = (props: PropsType) => {
       <Sheet.Overlay
         animation="medium"
         backgroundColor="#000000ab"
-        enterStyle={{opacity: 0}}
-        exitStyle={{opacity: 0}}
+        enterStyle={styles.sheetStyle}
+        exitStyle={styles.sheetStyle}
       />
-      <Sheet.Handle
-        position="absolute"
-        top={8}
-        left="3%"
-        width={40}
-        height={6}
-        bg={'lightgrey'}
-      />
+      <Sheet.Handle marginBottom={-10} height={5} bg={'lightgrey'} />
       <ScrollView>
         <Sheet.Frame
           justifyContent="center"

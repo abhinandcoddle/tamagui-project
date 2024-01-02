@@ -5,7 +5,6 @@ import {icons} from '../../themeConfig/icons';
 import {TouchableOpacity} from 'react-native';
 
 type PropsType = {
-  variant?: any;
   color?: string;
   size?: number;
   bgColor?: string;
@@ -25,8 +24,7 @@ export const Buttons = (props: PropsType) => {
       style={props.style}
       onPress={props.onClick}
       disabled={props.disabled}
-      backgroundColor={props.bgColor}
-      variant={props.variant}>
+      backgroundColor={props.bgColor}>
       {props.type === 'anchor' ? (
         <Text style={props.textStyle}>{props.label}</Text>
       ) : (

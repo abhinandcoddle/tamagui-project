@@ -1,17 +1,17 @@
 import React, {useState} from 'react';
 import {Container} from '../../themeConfig/GlobalStyles';
-import {Image, Separator, Text, XStack, YStack} from 'tamagui';
+import {Button, Image, Separator, Text, XStack, YStack} from 'tamagui';
 import styles from './LoginStyles';
 import {Buttons} from '../../components/Button/Button';
 import InputField from '../../components/InputField/InputField';
 import {BottomSheet} from '../../components/BottomSheet/BottomSheet';
 import Profile from '../../assets/icons/user.png';
 import Location from '../../assets/icons/globe.png';
-import Email from '../../assets/icons/mail.png';
+import {Mail} from '@tamagui/lucide-icons';
 
 const LoginScreen = () => {
   const [more, setMore] = useState(false);
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const [error, setError] = useState('disabled');
   return (
     <>
@@ -80,13 +80,11 @@ const LoginScreen = () => {
             style={styles.socialButtons}
             icon="Google"
             label="Continue with Google"
-            onClick={() => setError('disabled')}
           />
           <Buttons
             style={styles.socialButtons}
             icon="Facebook"
             label="Continue with Facebook"
-            onClick={() => setError('blocked')}
           />
           <Buttons
             style={styles.socialButtons}
@@ -142,9 +140,9 @@ const LoginScreen = () => {
           </YStack>
           <YStack style={styles.contactStack}>
             <Text style={styles.helpHeader}>Need some help?</Text>
-            <Separator marginVertical={12} />
+            <Separator marginVertical={12} bg="#c4c4c4" />
             <XStack style={styles.emailStack}>
-              <Image source={Email} width={40} height={40} />
+              <Button icon={<Mail size="$2" />} padding={0} bg="transparent" />
               <YStack marginLeft={12}>
                 <Text style={styles.emailUs}>Email us</Text>
                 <Text style={styles.emailUsSub}>Contact us via email</Text>
