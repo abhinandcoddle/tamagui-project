@@ -3,8 +3,7 @@ import Fonts from '../../utils/Fonts';
 export default StyleSheet.create({
   container: {
     padding: 24,
-    marginTop: 20,
-    backgroundColor: 'white',
+    marginTop: Platform.OS === 'ios' ? 0 : 20,
   },
   headerStack: {
     marginBottom: 24,
@@ -128,7 +127,6 @@ export default StyleSheet.create({
     fontFamily: Fonts.AVERTA_STD_BOLD,
     maxWidth: 300,
     textAlign: 'center',
-    marginBottom: 8,
   },
   errorSubText: {
     fontSize: 16,
@@ -136,12 +134,13 @@ export default StyleSheet.create({
     fontFamily: Fonts.AVERTA_STD,
     maxWidth: 225,
     textAlign: 'center',
-    marginBottom: 24,
+    marginTop: 8,
   },
   contactStack: {
     borderRadius: 8,
     padding: 16,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#f2f2f2',
+    marginTop: 24,
   },
   helpHeader: {
     fontSize: 16,

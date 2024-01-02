@@ -5,6 +5,12 @@ export default StyleSheet.create({
   buttonText: {
     fontFamily: Fonts.AVERTA_STD_BOLD,
   },
+  outlinedStyle: {
+    fontFamily: Fonts.AVERTA_STD_BOLD,
+  },
+  activeStyle: {
+    fontFamily: Fonts.AVERTA_STD_BOLD,
+  },
   iconStack: {
     position: 'absolute',
     left: 16,

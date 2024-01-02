@@ -7,4 +7,7 @@ export default StyleSheet.create({
     lineHeight: 24,
     fontFamily: Fonts.AVERTA_STD_BOLD,
   },
+  sheetStyle: {
+    opacity: 0,
+  },
 });
