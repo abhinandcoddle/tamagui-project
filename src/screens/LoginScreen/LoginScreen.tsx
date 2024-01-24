@@ -8,6 +8,7 @@ import {BottomSheet} from '../../components/BottomSheet/BottomSheet';
 import Profile from '../../assets/icons/user.png';
 import Location from '../../assets/icons/globe.png';
 import {Mail} from '@tamagui/lucide-icons';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 const LoginScreen = () => {
   const [more, setMore] = useState(false);
@@ -15,109 +16,111 @@ const LoginScreen = () => {
   const [error, setError] = useState('disabled');
   return (
     <>
-      <Container contentContainerStyle={styles.container}>
-        <YStack style={styles.headerStack}>
-          <Text style={styles.loginText}>Sign in</Text>
-          <XStack style={styles.subStack}>
-            <Text style={styles.subText}>Don't have an account?</Text>
-            <Buttons
-              label="Create account"
+      <SafeAreaView style={styles.safeAreaView}>
+        <Container contentContainerStyle={styles.container}>
+          <YStack style={styles.headerStack}>
+            <Text style={styles.loginText}>Sign in</Text>
+            <XStack style={styles.subStack}>
+              <Text style={styles.subText}>Don't have an account?</Text>
+              <Buttons
+                label="Create account"
+                size={16}
+                style={[styles.anchorButton, styles.createButton]}
+                textStyle={styles.createText}
+                type="anchor"
+              />
+            </XStack>
+          </YStack>
+          <YStack style={styles.inputStack}>
+            <InputField
               size={16}
-              style={[styles.anchorButton, styles.createButton]}
+              style={[styles.inputField, styles.userInput]}
+              label="Username"
+              pColor="#595D62"
+            />
+            <InputField
+              size={16}
+              style={styles.inputField}
+              label="Password"
+              pColor="#595D62"
+            />
+            <XStack>
+              <Buttons
+                label="Show"
+                size={16}
+                style={[styles.anchorButton, styles.showButton]}
+                textStyle={styles.buttonText}
+                type="anchor"
+              />
+            </XStack>
+          </YStack>
+          <XStack height={56}>
+            <Buttons
+              label="Forgot Password?"
+              size={16}
+              style={[styles.anchorButton, styles.forgotButton]}
               textStyle={styles.createText}
               type="anchor"
             />
           </XStack>
-        </YStack>
-        <YStack style={styles.inputStack}>
-          <InputField
+          <Buttons
+            label="Sign In"
             size={16}
-            style={[styles.inputField, styles.userInput]}
-            label="Username"
-            pColor="#595D62"
+            bgColor="#4E46B4"
+            color="white"
+            onClick={() => setOpen(true)}
+            style={styles.signinButton}
           />
-          <InputField
-            size={16}
-            style={styles.inputField}
-            label="Password"
-            pColor="#595D62"
-          />
-          <XStack>
+          <YStack style={styles.seperator}>
+            <XStack style={styles.seperatorLine} />
+            <XStack style={styles.seperatorText}>
+              <Text style={styles.orText}>Or</Text>
+            </XStack>
+          </YStack>
+          <YStack>
             <Buttons
-              label="Show"
-              size={16}
-              style={[styles.anchorButton, styles.showButton]}
-              textStyle={styles.buttonText}
-              type="anchor"
+              style={styles.socialButtons}
+              icon="Google"
+              label="Continue with Google"
             />
-          </XStack>
-        </YStack>
-        <XStack height={56}>
-          <Buttons
-            label="Forgot Password?"
-            size={16}
-            style={[styles.anchorButton, styles.forgotButton]}
-            textStyle={styles.createText}
-            type="anchor"
-          />
-        </XStack>
-        <Buttons
-          label="Sign In"
-          size={16}
-          bgColor="#4E46B4"
-          color="white"
-          onClick={() => setOpen(true)}
-          style={styles.signinButton}
-        />
-        <YStack style={styles.seperator}>
-          <XStack style={styles.seperatorLine} />
-          <XStack style={styles.seperatorText}>
-            <Text style={styles.orText}>Or</Text>
-          </XStack>
-        </YStack>
-        <YStack>
-          <Buttons
-            style={styles.socialButtons}
-            icon="Google"
-            label="Continue with Google"
-          />
-          <Buttons
-            style={styles.socialButtons}
-            icon="Facebook"
-            label="Continue with Facebook"
-          />
-          <Buttons
-            style={styles.socialButtons}
-            icon="Twitter"
-            label="Continue with Twitter"
-          />
-          {more && (
-            <>
-              <Buttons
-                style={styles.socialButtons}
-                icon="Telegram"
-                label="Continue with Telegram"
-              />
-              <Buttons
-                style={styles.socialButtons}
-                icon="Line"
-                label="Continue with Line"
-              />
-              <Buttons
-                style={styles.socialButtons}
-                icon="Whatsapp"
-                label="Continue with WhatsApp"
-              />
-            </>
-          )}
-          <Buttons
-            style={styles.socialButtons}
-            icon={more ? 'Minus' : 'Add'}
-            label={more ? 'Show less options' : 'Show more options'}
-            onClick={() => setMore(!more)}
-          />
-        </YStack>
-      </Container>
+            <Buttons
+              style={styles.socialButtons}
+              icon="Facebook"
+              label="Continue with Facebook"
+            />
+            <Buttons
+              style={styles.socialButtons}
+              icon="Twitter"
+              label="Continue with Twitter"
+            />
+            {more && (
+              <>
+                <Buttons
+                  style={styles.socialButtons}
+                  icon="Telegram"
+                  label="Continue with Telegram"
+                />
+                <Buttons
+                  style={styles.socialButtons}
+                  icon="Line"
+                  label="Continue with Line"
+                />
+                <Buttons
+                  style={styles.socialButtons}
+                  icon="Whatsapp"
+                  label="Continue with WhatsApp"
+                />
+              </>
+            )}
+            <Buttons
+              style={styles.socialButtons}
+              icon={more ? 'Minus' : 'Add'}
+              label={more ? 'Show less options' : 'Show more options'}
+              onClick={() => setMore(!more)}
+            />
+          </YStack>
+        </Container>
+      </SafeAreaView>
       <BottomSheet open={open} setOpen={setOpen} title={'Sign in error'}>
         <YStack style={styles.errorStack}>
           <YStack style={styles.errorContent}>
