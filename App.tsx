@@ -1,12 +1,13 @@
 import React from 'react';
 import config from './tamagui.config';
 import {TamaguiProvider} from 'tamagui';
-import {StatusBar, SafeAreaView} from 'react-native';
+import {StatusBar} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {ToastProvider} from '@tamagui/toast';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import HomeScreen from './src/screens/Home/HomeScreen';
 import SearchScreen from './src/screens/SearchScreen/SearchScreen';
+import TestingScreen from './src/screens/TestingScreen';
 import LoginScreen from './src/screens/LoginScreen/LoginScreen';
 
 export default function App() {
@@ -14,7 +15,6 @@ export default function App() {
 
   return (
     <TamaguiProvider config={config}>
-      <SafeAreaView />
       <StatusBar
         barStyle="dark-content"
         translucent
@@ -23,13 +23,14 @@ export default function App() {
       <ToastProvider>
         <NavigationContainer>
           <Stack.Navigator
-            initialRouteName="Login"
+            initialRouteName="Test"
             screenOptions={{
               headerShown: false,
             }}>
             <Stack.Screen name="Login" component={LoginScreen} />
             <Stack.Screen name="Home" component={HomeScreen} />
             <Stack.Screen name="Search" component={SearchScreen} />
+            <Stack.Screen name="Test" component={TestingScreen} />
           </Stack.Navigator>
         </NavigationContainer>
       </ToastProvider>

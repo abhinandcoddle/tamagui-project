@@ -9,6 +9,9 @@ import {
   YStack,
 } from 'tamagui';
 import notification from '../../assets/images/notification';
+type PropsType = {
+  leftIcon?: string;
+};
 
 export function SelectDemo() {
   return (
@@ -18,13 +21,6 @@ export function SelectDemo() {
           Custom
         </Label>
         <SelectDemoItem />
-      </XStack>
-
-      <XStack ai="center" space>
-        <Label f={1} fb={0}>
-          Native
-        </Label>
-        <SelectDemoItem native />
       </XStack>
     </YStack>
   );
@@ -43,7 +39,6 @@ export function SelectDemoItem(props: SelectProps) {
       </Select.Trigger>
       <Adapt when="sm" platform="touch">
         <Sheet
-          native={!!props.native}
           modal
           dismissOnSnapToBottom
           animationConfig={{
@@ -80,8 +75,10 @@ export function SelectDemoItem(props: SelectProps) {
           // enterStyle={{ o: 0, y: -10 }}
           // exitStyle={{ o: 0, y: 10 }}
           minWidth={200}>
-          <Select.Group>
-            <Select.Label>Fruits</Select.Label>
+          <Select.Group marginBottom={10}>
+            <Select.Label fontWeight="bold" fontSize="$5">
+              Fruits
+            </Select.Label>
 
             {/* for longer lists memoizing these is useful */}
 
@@ -93,9 +90,11 @@ export function SelectDemoItem(props: SelectProps) {
                       index={i}
                       key={item.name}
                       value={item.name.toLowerCase()}>
-                      <Select.ItemText>{item.name}</Select.ItemText>
+                      <Select.ItemText fontSize="$4">
+                        {item.name}
+                      </Select.ItemText>
 
-                      <Select.ItemIndicator marginLeft="auto"></Select.ItemIndicator>
+                      <Select.ItemIndicator marginLeft="auto" />
                     </Select.Item>
                   );
                 }),
@@ -103,75 +102,39 @@ export function SelectDemoItem(props: SelectProps) {
               [],
             )}
           </Select.Group>
-
-          {/* Native gets an extra icon */}
-
-          {props.native && (
-            <YStack
-              position="absolute"
-              right={0}
-              top={0}
-              bottom={0}
-              alignItems="center"
-              justifyContent="center"
-              width={'$4'}
-              pointerEvents="none"></YStack>
-          )}
         </Select.Viewport>
         <Select.ScrollDownButton
           alignItems="center"
           justifyContent="center"
           position="relative"
           width="100%"
-          height="$3">
-          <YStack zIndex={10}></YStack>
-        </Select.ScrollDownButton>
+          height="$3"
+        />
       </Select.Content>
     </Select>
   );
 }
 const items = [
   {name: 'Apple'},
-
   {name: 'Pear'},
-
   {name: 'Blackberry'},
-
   {name: 'Peach'},
-
   {name: 'Apricot'},
-
   {name: 'Melon'},
-
   {name: 'Honeydew'},
-
   {name: 'Starfruit'},
-
   {name: 'Blueberry'},
-
   {name: 'Raspberry'},
-
   {name: 'Strawberry'},
-
   {name: 'Mango'},
-
   {name: 'Pineapple'},
-
   {name: 'Lime'},
-
   {name: 'Lemon'},
-
   {name: 'Coconut'},
-
   {name: 'Guava'},
-
   {name: 'Papaya'},
-
   {name: 'Orange'},
-
   {name: 'Grape'},
-
   {name: 'Jackfruit'},
-
   {name: 'Durian'},
 ];

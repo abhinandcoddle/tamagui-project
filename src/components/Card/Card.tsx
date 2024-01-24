@@ -17,6 +17,6 @@ export default (props: PropsType) => (
       <Button borderRadius="$10">Purchase</Button>
     </Card.Footer>
 
-    <Card.Background></Card.Background>
+    <Card.Background />
   </Card>
 );

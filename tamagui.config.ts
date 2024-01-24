@@ -21,7 +21,6 @@ export const tokens = createTokens({
   space: {},
   radius: {},
   zIndex: {},
-  
 });
 
 declare module 'tamagui' {

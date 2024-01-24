@@ -1,9 +1,13 @@
 import {Platform, StyleSheet} from 'react-native';
 import Fonts from '../../utils/Fonts';
 export default StyleSheet.create({
+  safeAreaView: {
+    flex: 1,
+    backgroundColor: 'white',
+  },
   container: {
-    padding: 24,
-    marginTop: Platform.OS === 'ios' ? 0 : 20,
+    paddingHorizontal: 24,
+    paddingTop: 20,
   },
   headerStack: {
     marginBottom: 24,
@@ -83,7 +87,6 @@ export default StyleSheet.create({
     lineHeight: 20,
   },
   seperator: {
-    height: 16,
     marginVertical: 24,
     alignItems: 'center',
     position: 'relative',

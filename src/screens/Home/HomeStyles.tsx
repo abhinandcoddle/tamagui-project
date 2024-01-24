@@ -5,4 +5,7 @@ export default StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 20,
   },
+  container: {
+    paddingHorizontal: 24,
+  },
 });
