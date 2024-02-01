@@ -1,6 +1,6 @@
 import React from 'react';
 import {TamaguiProvider, Theme, RadioGroup, YStack, XStack, Progress, Spinner} from 'tamagui';
-import config from './tamagui.config';
+import config, { tokens } from './tamagui.config';
 import {Container, HeaderText, styles} from './GlobalStyles';
 
 import {SafeAreaView, StatusBar, View} from 'react-native';
@@ -16,13 +16,16 @@ import ProgressBar from './src/components/ProgressBar/ProgressBar';
 import { AlertBox } from './src/components/AlertBox/AlertBox';
 import { AccordionSet } from './src/components/Accordion/Accordion';
 
+import { createFont, createTamagui, createTokens } from 'tamagui'
+
+
 export default function App() {
   return (
     <TamaguiProvider config={config}>
       <SafeAreaView style={styles.safeAreaView}>
         <StatusBar barStyle="dark-content" backgroundColor="white" />
 
-        <Container marginHorizontal="$2">
+        {/* <Container marginHorizontal="$2">
           <HeaderText size="md">Hi, Welcome</HeaderText>
           <InputField placeholder={'Full Name'} />
           <TextArea placeholder={'Enter your details...'} />
@@ -39,29 +42,27 @@ export default function App() {
             </YStack>
           </RadioGroup>
 
-          {/* <XStack $sm={{flexDirection: 'column'}}>
-            <Card width={250} height={300} />
-          </XStack> */}
-
           <YStack width={200} alignItems="center" space="$3">
             <XStack space="$3" $xs={{flexDirection: 'column'}}>
               <SwitchWithLabel size="$2" defaultChecked />
             </XStack>
           </YStack>
           <ProgressBar/>
-          {/* <AlertBox /> */}
           <AccordionSet />
           <Spinner />
 
-        </Container>
+        </Container> */}
 
         <Button
           variant={''}
-          color={'#fff'}
-          background={'blue'}
-          title={'Signup'}
+          color={tokens.color.defaultWhite}
+          background={tokens.color.primaryColor}
+          borderRadius={tokens.radius.sm}
+          borderColor={''}
+          title={'Button'}
           disabled={false}
         />
+
       </SafeAreaView>
     </TamaguiProvider>
   );

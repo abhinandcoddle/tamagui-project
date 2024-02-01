@@ -1,7 +1,8 @@
 import {StyleSheet} from 'react-native';
 export default StyleSheet.create({
   btnStyle : {
-    backgroundColor: 'blue',
-    color: '#fff',
+    width: '100%',
+    height: 48,
+    paddingHorizontal: 16,
   }
 });
