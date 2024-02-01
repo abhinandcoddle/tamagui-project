@@ -11,13 +11,12 @@ const DownIcon = () => {
         stroke-linecap="round"
         stroke-linejoin="round"></G>
       <G id="SVGRepo_iconCarrier">
-        {' '}
         <Path
           d="M7 10L12 15L17 10"
           stroke="#000000"
           stroke-width="1.5"
           stroke-linecap="round"
-          stroke-linejoin="round"></Path>{' '}
+          stroke-linejoin="round"></Path>
       </G>
     </Svg>
   );

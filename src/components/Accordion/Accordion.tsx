@@ -1,6 +1,8 @@
 // import {ChevronDown} from '@tamagui/lucide-icons';
 
 import {Accordion, Paragraph, Square, Text} from 'tamagui';
+import DownIcon from '../../assets/icons/DownIcon';
+import CheckIcons from '../../assets/icons/CheckIcons';
 
 export function AccordionSet() {
   return (
@@ -25,13 +27,13 @@ export function AccordionSet() {
             fatigue.
           </Paragraph>
         </Accordion.Content>
+
       </Accordion.Item>
       <Accordion.Item value="a2">
         <Accordion.Trigger flexDirection="row" justifyContent="space-between">
           {({open}:any) => (
             <>
               <Paragraph>2. Eat 4 eggs</Paragraph>
-
               <Square animation="quick" rotate={open ? '180deg' : '0deg'}>
                 {/* <ChevronDown size="$1" /> */}
               </Square>
