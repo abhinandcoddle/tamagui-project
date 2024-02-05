@@ -4,27 +4,29 @@ import { Images } from '../../themeConfig';
 
 
 type PropsType = {
-  variant?: any;
   color?: string;
   background?: string;
   borderColor?: string;
   borderRadius?: number;
   title?: string;
   disabled?: boolean;
+  height?: number;
+  maxWidth?: number;
 };
 export default (props: PropsType) => (
   <Button
-    size="$4"
+    size="$2"
     color={props.color}
     backgroundColor={props.background}
+    maxWidth={props.maxWidth}
+    height={props.height}
     borderColor={props.borderColor}
     borderRadius={props.borderRadius}
     disabled={props.disabled}
-    variant={props.variant}
-    style={styles.btnStyle}
+    style={styles.btnSmStyle}
     // icon={Images.FACEBOOK}
+    icon={Images.ICON}
     >
     {props.title}
   </Button>
-  
 );

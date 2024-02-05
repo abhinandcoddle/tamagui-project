@@ -1,10 +1,19 @@
 import React from 'react';
-import {TamaguiProvider, Theme, RadioGroup, YStack, XStack, Progress, Spinner} from 'tamagui';
-import config, { tokens } from './tamagui.config';
+import {
+  TamaguiProvider,
+  Theme,
+  RadioGroup,
+  YStack,
+  XStack,
+  Progress,
+  Spinner,
+} from 'tamagui';
+import config, {tokens} from './tamagui.config';
 import {Container, HeaderText, styles} from './GlobalStyles';
 
 import {SafeAreaView, StatusBar, View} from 'react-native';
 import Button from './src/components/Button/Button';
+import SmallButton from './src/components/Button/SmallButton';
 import GlobalStyles from './GlobalStyles';
 import InputField from './src/components/InputField/InputField';
 import TextArea from './src/components/TextArea/TextArea';
@@ -13,11 +22,8 @@ import RadioButton from './src/components/Radio/RadioButton';
 import Card from './src/components/Card/Card';
 import {SwitchWithLabel} from './src/components/Switch/Switch';
 import ProgressBar from './src/components/ProgressBar/ProgressBar';
-import { AlertBox } from './src/components/AlertBox/AlertBox';
-import { AccordionSet } from './src/components/Accordion/Accordion';
-
-import { createFont, createTamagui, createTokens } from 'tamagui'
-
+import {AlertBox} from './src/components/AlertBox/AlertBox';
+import {AccordionSet} from './src/components/Accordion/Accordion';
 
 export default function App() {
   return (
@@ -55,6 +61,7 @@ export default function App() {
 
         <Button
           variant={''}
+          width={'100%'}
           color={tokens.color.defaultWhite}
           background={tokens.color.primaryColor}
           borderRadius={tokens.radius.sm}
@@ -62,6 +69,124 @@ export default function App() {
           title={'Button'}
           disabled={false}
         />
+
+        <Button
+          variant={''}
+          color={tokens.color.defaultWhite}
+          background={tokens.color.secondaryColor}
+          borderRadius={tokens.radius.sm}
+          borderColor={''}
+          title={'Button'}
+          disabled={false}
+        />
+
+        <Button
+          variant={''}
+          color={tokens.color.primaryColor}
+          background={tokens.color.defaultWhite}
+          borderRadius={tokens.radius.sm}
+          borderColor={tokens.color.primaryColor}
+          title={'Button'}
+          disabled={false}
+        />
+
+        <Button
+          variant={''}
+          color={tokens.color.secondaryColor}
+          background={tokens.color.defaultWhite}
+          borderRadius={tokens.radius.sm}
+          borderColor={tokens.color.secondaryColor}
+          title={'Button'}
+          disabled={false}
+        />
+
+        <InputField placeholder={'Placeholder text'} />
+
+        <Button
+          variant={''}
+          color={tokens.color.grayColor}
+          background={tokens.color.disabledColor}
+          borderRadius={tokens.radius.full}
+          borderColor={tokens.color.grayColor}
+          title={'Button'}
+          disabled={true}
+        />
+
+        <SmallButton
+          color={tokens.color.defaultWhite}
+          background={tokens.color.primaryColor}
+          borderColor={tokens.color.primaryColor}
+          borderRadius={tokens.radius.full}
+          height={48}
+          maxWidth={115}
+          title={'Button'}
+        />
+         <SmallButton
+          color={tokens.color.primaryColor}
+          background={tokens.color.defaultWhite}
+          borderColor={tokens.color.primaryColor}
+          borderRadius={tokens.radius.full}
+          height={48}
+          maxWidth={115}
+          title={'Button'}
+        />
+
+        <SmallButton
+          color={tokens.color.primaryColor}
+          background={tokens.color.violetColor}
+          borderColor={tokens.color.violetColor}
+          borderRadius={tokens.radius.full}
+          height={48}
+          maxWidth={115}
+          title={'Button'}
+        />
+
+        <SmallButton
+          color={tokens.color.primaryColor}
+          background={'transparent'}
+          borderColor={'transparent'}
+          borderRadius={tokens.radius.full}
+          height={48}
+          maxWidth={115}
+          title={'Button'}
+        />
+
+        <SmallButton
+          color={tokens.color.primaryColor}
+          background={'transparent'}
+          borderColor={tokens.color.primaryColor}
+          borderRadius={tokens.radius.full}
+          height={48}
+          maxWidth={48}
+          title={'+'}
+        />
+        <SmallButton
+          color={tokens.color.primaryColor}
+          background={'transparent'}
+          borderColor={tokens.color.primaryColor}
+          borderRadius={tokens.radius.sm}
+          height={48}
+          maxWidth={48}
+          title={'+'}
+        />
+        <SmallButton
+          color={tokens.color.defaultWhite}
+          background={tokens.color.primaryColor}
+          borderColor={tokens.color.primaryColor}
+          borderRadius={tokens.radius.full}
+          height={48}
+          maxWidth={48}
+          title={'+'}
+        />
+        <SmallButton
+          color={tokens.color.defaultWhite}
+          background={tokens.color.primaryColor}
+          borderColor={tokens.color.primaryColor}
+          borderRadius={tokens.radius.sm}
+          height={48}
+          maxWidth={82}
+          title={'Label'}
+        />  
 
       </SafeAreaView>
     </TamaguiProvider>
