@@ -5,4 +5,8 @@ export default {
   DMSans_MEDIUM: 'DMSans_Medium',
   DMSans_REGULAR: 'DMSans_Regular',
   DMSans_SEMIBOLD: 'DMSans_SemiBold',
+  Inter400: 'InterRegular',
+  Inter500: 'InterMedium',
+  Inter600: 'InterSemiBold',
+  Inter700: 'InterBold',
 };

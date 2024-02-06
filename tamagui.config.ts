@@ -17,9 +17,23 @@ export const tokens = createTokens({
     md: 30,
     lg: 40,
   },
-  color: {},
+  color: {
+    primaryColor: '#6432C8',
+    secondaryColor: '#3C3C3C',
+    disabledColor: '#E3E5E5',
+    defaultWhite: '#FFFFFF',
+    defaultBlack: '#000000',
+    grayColor: '#979C9E',
+    lightColor: '#CDCFD0',
+    violetColor: '#E7E7FF',
+    bgColor: '#F6F7F9',
+    redColor: '#FF4E64',
+  },
   space: {},
-  radius: {},
+  radius: {
+    sm: 8,
+    full: 999,
+  },
   zIndex: {},
 });
 

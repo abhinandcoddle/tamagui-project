@@ -1,5 +1,5 @@
 import React from 'react';
-import {ChevronRight, Cloud, Moon, Star, Sun} from '@tamagui/lucide-icons';
+import {ChevronRight, Cloud, Moon, Star, Sun, Apple} from '@tamagui/lucide-icons';
 import {ListItem, XStack, YGroup} from 'tamagui';
 
 export function ListItems() {

@@ -10,3 +10,5 @@ export const styles = StyleSheet.create({
 export const Container = styled(ScrollView, {
   // backgroundColor: 'white',
 });
+
+
