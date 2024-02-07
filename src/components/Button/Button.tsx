@@ -3,7 +3,7 @@ import {Button, Text, View} from 'tamagui';
 import styles from './ButtonStyles';
 import {icons} from '../../themeConfig/icons';
 import {TouchableOpacity} from 'react-native';
-import { tokens } from '../../../tamagui.config';
+import {tokens} from '../../../tamagui.config';
 import CircleIcon from '../../assets/icons/Circle';
 
 type PropsType = {
@@ -19,6 +19,8 @@ type PropsType = {
   icon?: any;
   height?: any;
   width?: any;
+  iconRight?: boolean;
+  alignCenter?: boolean;
 };
 export const Buttons = (props: PropsType) => {
   const Icon = icons[props.icon];
@@ -28,26 +30,60 @@ export const Buttons = (props: PropsType) => {
       style={props.style}
       onPress={props.onClick}
       disabled={props.disabled}
-      backgroundColor={props.bgColor}
+      backgroundColor={
+        props.disabled ? tokens.color.disabledColor : props.bgColor
+      }
       width={props.width}
-      height={props.height}
-      >
-      {props.type === 'anchor' ? (
-        <Text style={props.textStyle}>{props.label}</Text>
-      ) : (
-        <Text
-          style={styles.buttonText}
-          fontSize={props.size}
-          color={props.color}>
-          {props.label}
-        </Text>
-      )}
-      {props.icon && (
-        <View style={styles.iconStack}>
-          {/* <Icon/> */}
-          <CircleIcon />
+      height={props.height}>
+
+        
+      {props.alignCenter ? (
+        <View style={styles.alignCenter}>
+          {props.type === 'anchor' ? (
+            <Text style={props.textStyle}>{props.label}</Text>
+          ) : (
+            <Text
+              style={styles.buttonTextCenter}
+              fontSize={props.size}
+              color={props.disabled ? tokens.color.grayColor : props.color}>
+              {props.label}
+            </Text>
+          )}
+          {props.icon && (
+            <View
+              style={
+                props.iconRight ? styles.iconStackRight : styles.iconStackCenter
+              }>
+              {/* <Icon/> */}
+              <CircleIcon />
+            </View>
+          )}
         </View>
+      ) : (
+        <>
+          {props.type === 'anchor' ? (
+            <Text style={props.textStyle}>{props.label}</Text>
+          ) : (
+            <Text
+              style={styles.buttonText}
+              fontSize={props.size}
+              color={props.disabled ? tokens.color.grayColor : props.color}>
+              {props.label}
+            </Text>
+          )}
+          {props.icon && (
+            <View
+              style={
+                props.iconRight ? styles.iconStackRight : styles.iconStack
+              }>
+              {/* <Icon/> */}
+              <CircleIcon />
+            </View>
+          )}
+        </>
       )}
+
     </Button>
   );
 };
+

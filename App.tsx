@@ -1,6 +1,6 @@
 import React from 'react';
 import config, {tokens} from './tamagui.config';
-import {Button, TamaguiProvider, XStack, YStack} from 'tamagui';
+import {Button, ScrollView, TamaguiProvider, XStack, YStack} from 'tamagui';
 import {StatusBar} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {ToastProvider} from '@tamagui/toast';
@@ -48,10 +48,10 @@ export default function App() {
         </NavigationContainer>
       </ToastProvider> */}
 
-      <YStack gap='$2' paddingHorizontal={20}>
+      <ScrollView>
+      <YStack gap="$4" padding={20}>
         <Buttons
           label={'Button'}
-          icon={'Notification'}
           height={48}
           width={'auto'}
           bgColor={tokens.color.primaryColor}
@@ -61,11 +61,11 @@ export default function App() {
             borderColor: tokens.color.primaryColor,
           }}
         />
+
         <Buttons
           label={'Button'}
           height={48}
           width={'auto'}
-          // icon={'Notification'}
           bgColor={tokens.color.defaultWhite}
           color={tokens.color.primaryColor}
           style={{
@@ -73,11 +73,55 @@ export default function App() {
             borderColor: tokens.color.primaryColor,
           }}
         />
+
         <Buttons
           label={'Button'}
-          icon={'Notification'}
+          disabled={true}
           height={48}
-          width={'46%'}
+          width={'auto'}
+          style={{
+            borderRadius: tokens.radius.full,
+            borderColor: tokens.color.disabledColor,
+          }}
+        />
+
+        <Buttons
+          label={'Button'}
+          disabled={false}
+          height={48}
+          width={'auto'}
+          icon={'Notification'}
+          iconRight={false}
+          bgColor={tokens.color.primaryColor}
+          color={tokens.color.defaultWhite}
+          style={{
+            borderRadius: tokens.radius.full,
+            borderColor: tokens.color.disabledColor,
+          }}
+        />
+
+        <Buttons
+          label={'Button'}
+          disabled={false}
+          height={48}
+          width={'auto'}
+          icon={'Notification'}
+          iconRight={false}
+          bgColor={'transparent'}
+          color={tokens.color.primaryColor}
+          style={{
+            borderRadius: tokens.radius.full,
+            borderColor: tokens.color.primaryColor,
+          }}
+        />
+
+        <Buttons
+          label={'Button'}
+          disabled={false}
+          height={48}
+          width={'auto'}
+          icon={'Notification'}
+          iconRight={true}
           bgColor={tokens.color.primaryColor}
           color={tokens.color.defaultWhite}
           style={{
@@ -88,30 +132,127 @@ export default function App() {
 
         <Buttons
           label={'Button'}
-          // icon={'Notification'}
+          disabled={false}
           height={48}
           width={'auto'}
-          bgColor={tokens.color.defaultWhite}
-          color={tokens.color.primaryColor}
+          icon={'Notification'}
+          alignCenter={true}
+          bgColor={tokens.color.primaryColor}
+          color={tokens.color.defaultWhite}
           style={{
             borderRadius: tokens.radius.full,
             borderColor: tokens.color.primaryColor,
           }}
         />
 
-        <InputField
-          label='Placeholder text'
-          pColor={tokens.color.defaultBlack}
-          borderColor={tokens.color.primaryColor}
-          borderWidth={1.5}
-          borderRadius={tokens.radius.sm}
-          width={'100%'}
-          height={54}
-          fontSize={16} 
-
+        <Buttons
+          label={'Button'}
+          disabled={false}
+          height={48}
+          width={'auto'}
+          // icon={'Notification'}
+          bgColor={'transparent'}
+          color={tokens.color.primaryColor}
+          style={{
+            borderRadius: tokens.radius.full,
+            borderColor: 'transparent',
+          }}
         />
 
+        <Buttons
+          label={'Button'}
+          disabled={false}
+          height={48}
+          width={'auto'}
+          // icon={'Notification'}
+          bgColor={tokens.color.secondaryColor}
+          color={tokens.color.defaultWhite}
+          style={{
+            borderRadius: tokens.radius.sm,
+            borderColor: 'transparent'
+          }}
+        />
+
+        <Buttons
+          label={'Button'}
+          disabled={false}
+          height={48}
+          width={'auto'}
+          // icon={'Notification'}
+          bgColor={'transparent'}
+          color={tokens.color.secondaryColor}
+          style={{
+            borderRadius: tokens.radius.sm,
+            borderColor: tokens.color.secondaryColor,
+          }}
+        />
+
+        <Buttons
+          label={'Button'}
+          disabled={true}
+          height={48}
+          width={'auto'}
+          // icon={'Notification'}
+          color={tokens.color.secondaryColor}
+          style={{
+            borderRadius: tokens.radius.sm,
+            borderColor: tokens.color.disabledColor,
+          }}
+        />
+
+        <Buttons
+          label={'Button'}
+          disabled={false}
+          height={48}
+          width={'auto'}
+          icon={'Notification'}
+          alignCenter={false}
+          bgColor={tokens.color.secondaryColor}
+          color={tokens.color.defaultWhite}
+          style={{
+            borderRadius: tokens.radius.sm,
+            borderColor: tokens.color.secondaryColor,
+          }}
+        />
+
+        <Buttons
+          label={'Button'}
+          disabled={false}
+          height={48}
+          width={'auto'}
+          icon={'Notification'}
+          iconRight={true}
+          alignCenter={false}
+          bgColor={tokens.color.secondaryColor}
+          color={tokens.color.defaultWhite}
+          style={{
+            borderRadius: tokens.radius.sm,
+            borderColor: tokens.color.secondaryColor,
+          }}
+        />
+
+        <Buttons
+          label={'Button'}
+          disabled={false}
+          height={48}
+          width={'auto'}
+          icon={'Notification'}
+          alignCenter={true}
+          bgColor={tokens.color.secondaryColor}
+          color={tokens.color.defaultWhite}
+          style={{
+            borderRadius: tokens.radius.sm,
+            borderColor: tokens.color.secondaryColor,
+          }}
+        />
+
+              
+      
       </YStack>
+
+    </ScrollView>
+
+
     </TamaguiProvider>
   );
 }

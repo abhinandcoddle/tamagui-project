@@ -19,4 +19,19 @@ export default StyleSheet.create({
     left: 16,
     borderRadius: 100,
   },
+  iconStackRight: {
+    position: 'absolute',
+    right: 16,
+  },
+  buttonTextCenter: {
+    fontFamily: Fonts.Inter500,
+    fontSize: 16,
+  },
+  alignCenter: {
+    display: 'flex',
+    flexDirection: 'row-reverse',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    minWidth: 70,
+  },
 });
