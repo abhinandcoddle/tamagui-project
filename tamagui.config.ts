@@ -28,6 +28,7 @@ export const tokens = createTokens({
     violetColor: '#E7E7FF',
     bgColor: '#F6F7F9',
     redColor: '#FF4E64',
+    purpleColor: '#E7DEF7',
   },
   space: {},
   radius: {

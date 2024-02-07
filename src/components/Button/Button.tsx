@@ -38,7 +38,7 @@ export const Buttons = (props: PropsType) => {
 
         
       {props.alignCenter ? (
-        <View style={styles.alignCenter}>
+        <View style={[styles.alignCenter, props.iconRight? {flexDirection: 'row'} : {flexDirection: 'row-reverse'}, props.icon? {justifyContent: 'space-between'} : {justifyContent: 'center'}]}>
           {props.type === 'anchor' ? (
             <Text style={props.textStyle}>{props.label}</Text>
           ) : (
@@ -51,9 +51,10 @@ export const Buttons = (props: PropsType) => {
           )}
           {props.icon && (
             <View
-              style={
-                props.iconRight ? styles.iconStackRight : styles.iconStackCenter
-              }>
+              // style={
+              //   props.iconRight ? styles.iconStackRights : styles.iconStackCenter
+              // }
+              >
               {/* <Icon/> */}
               <CircleIcon />
             </View>

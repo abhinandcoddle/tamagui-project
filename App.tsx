@@ -22,6 +22,7 @@ import {
 import {Container} from './src/themeConfig/GlobalStyles';
 import InputField from './src/components/InputField/InputField';
 import Fonts from './src/utils/Fonts';
+import SmallButton from './src/components/Button/SmallButton';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -49,210 +50,403 @@ export default function App() {
       </ToastProvider> */}
 
       <ScrollView>
-      <YStack gap="$4" padding={20}>
-        <Buttons
-          label={'Button'}
-          height={48}
-          width={'auto'}
-          bgColor={tokens.color.primaryColor}
-          color={tokens.color.defaultWhite}
-          style={{
-            borderRadius: tokens.radius.sm,
-            borderColor: tokens.color.primaryColor,
-          }}
+        <YStack gap="$4" padding={20}>
+          <Buttons
+            label={'Button'}
+            height={48}
+            width={'auto'}
+            bgColor={tokens.color.primaryColor}
+            color={tokens.color.defaultWhite}
+            style={{
+              borderRadius: tokens.radius.sm,
+              borderColor: tokens.color.primaryColor,
+            }}
+          />
+
+          <Buttons
+            label={'Button'}
+            height={48}
+            width={'auto'}
+            bgColor={tokens.color.defaultWhite}
+            color={tokens.color.primaryColor}
+            style={{
+              borderRadius: tokens.radius.sm,
+              borderColor: tokens.color.primaryColor,
+            }}
+          />
+
+          <Buttons
+            label={'Button'}
+            disabled={true}
+            height={48}
+            width={'auto'}
+            style={{
+              borderRadius: tokens.radius.full,
+              borderColor: tokens.color.disabledColor,
+            }}
+          />
+
+          <Buttons
+            label={'Button'}
+            disabled={false}
+            height={48}
+            width={'auto'}
+            icon={'Notification'}
+            iconRight={false}
+            bgColor={tokens.color.primaryColor}
+            color={tokens.color.defaultWhite}
+            style={{
+              borderRadius: tokens.radius.full,
+              borderColor: tokens.color.disabledColor,
+            }}
+          />
+
+          <Buttons
+            label={'Button'}
+            disabled={false}
+            height={48}
+            width={'auto'}
+            icon={'Notification'}
+            iconRight={false}
+            bgColor={'transparent'}
+            color={tokens.color.primaryColor}
+            style={{
+              borderRadius: tokens.radius.full,
+              borderColor: tokens.color.primaryColor,
+            }}
+          />
+
+          <Buttons
+            label={'Button'}
+            disabled={false}
+            height={48}
+            width={'auto'}
+            icon={'Notification'}
+            iconRight={true}
+            bgColor={tokens.color.primaryColor}
+            color={tokens.color.defaultWhite}
+            style={{
+              borderRadius: tokens.radius.full,
+              borderColor: tokens.color.primaryColor,
+            }}
+          />
+
+          <Buttons
+            label={'Button'}
+            disabled={false}
+            height={48}
+            width={'auto'}
+            icon={'Notification'}
+            alignCenter={true}
+            bgColor={tokens.color.primaryColor}
+            color={tokens.color.defaultWhite}
+            style={{
+              borderRadius: tokens.radius.full,
+              borderColor: tokens.color.primaryColor,
+            }}
+          />
+
+          <Buttons
+            label={'Button'}
+            disabled={false}
+            height={48}
+            width={'auto'}
+            // icon={'Notification'}
+            bgColor={'transparent'}
+            color={tokens.color.primaryColor}
+            style={{
+              borderRadius: tokens.radius.full,
+              borderColor: 'transparent',
+            }}
+          />
+
+          <Buttons
+            label={'Button'}
+            disabled={false}
+            height={48}
+            width={'auto'}
+            // icon={'Notification'}
+            bgColor={tokens.color.secondaryColor}
+            color={tokens.color.defaultWhite}
+            style={{
+              borderRadius: tokens.radius.sm,
+              borderColor: 'transparent',
+            }}
+          />
+
+          <Buttons
+            label={'Button'}
+            disabled={false}
+            height={48}
+            width={'auto'}
+            // icon={'Notification'}
+            bgColor={'transparent'}
+            color={tokens.color.secondaryColor}
+            style={{
+              borderRadius: tokens.radius.sm,
+              borderColor: tokens.color.secondaryColor,
+            }}
+          />
+
+          <Buttons
+            label={'Button'}
+            disabled={true}
+            height={48}
+            width={'auto'}
+            // icon={'Notification'}
+            color={tokens.color.secondaryColor}
+            style={{
+              borderRadius: tokens.radius.sm,
+              borderColor: tokens.color.disabledColor,
+            }}
+          />
+
+          <Buttons
+            label={'Button'}
+            disabled={false}
+            height={48}
+            width={'auto'}
+            icon={'Notification'}
+            alignCenter={false}
+            bgColor={tokens.color.secondaryColor}
+            color={tokens.color.defaultWhite}
+            style={{
+              borderRadius: tokens.radius.sm,
+              borderColor: tokens.color.secondaryColor,
+            }}
+          />
+
+          <Buttons
+            label={'Button'}
+            disabled={false}
+            height={48}
+            width={'auto'}
+            icon={'Notification'}
+            iconRight={true}
+            alignCenter={false}
+            bgColor={tokens.color.secondaryColor}
+            color={tokens.color.defaultWhite}
+            style={{
+              borderRadius: tokens.radius.sm,
+              borderColor: tokens.color.secondaryColor,
+            }}
+          />
+
+          <Buttons
+            label={'Button'}
+            disabled={false}
+            height={48}
+            width={'auto'}
+            icon={'Notification'}
+            alignCenter={true}
+            iconRight={true}
+            bgColor={tokens.color.secondaryColor}
+            color={tokens.color.defaultWhite}
+            style={{
+              borderRadius: tokens.radius.sm,
+              borderColor: tokens.color.secondaryColor,
+            }}
+          />
+
+
+          <XStack justifyContent='space-between'>
+            <SmallButton
+              maxWidth={82}
+              height={48}
+              label={'Label'}
+              bgColor={tokens.color.primaryColor}
+              color={tokens.color.defaultWhite}
+              borderRadius={tokens.radius.sm}
+            />
+            <SmallButton
+              maxWidth={48}
+              height={48}
+              label={'+'}
+              bgColor={'transparent'}
+              color={tokens.color.primaryColor}
+              borderRadius={tokens.radius.sm}
+              borderColor={tokens.color.primaryColor}
+            />
+            <SmallButton
+              maxWidth={48}
+              height={48}
+              label={'+'}
+              bgColor={tokens.color.primaryColor}
+              color={tokens.color.defaultWhite}
+              borderRadius={tokens.radius.full}
+            />
+            <SmallButton
+              maxWidth={48}
+              height={48}
+              label={'+'}
+              bgColor={'transparent'}
+              color={tokens.color.primaryColor}
+              borderRadius={tokens.radius.full}
+              borderColor={tokens.color.primaryColor}
+            />
+          </XStack>
+
+
+
+
+          <Buttons
+            label={'Button'}
+            disabled={false}
+            height={48}
+            width={115}
+            // icon={'Notification'}
+            alignCenter={true}
+            iconRight={true}
+            bgColor={tokens.color.primaryColor}
+            color={tokens.color.defaultWhite}
+            style={{
+              borderRadius: tokens.radius.full,
+              borderColor: tokens.color.primaryColor,
+            }}
         />
 
-        <Buttons
-          label={'Button'}
-          height={48}
-          width={'auto'}
-          bgColor={tokens.color.defaultWhite}
-          color={tokens.color.primaryColor}
-          style={{
-            borderRadius: tokens.radius.sm,
-            borderColor: tokens.color.primaryColor,
-          }}
+          <Buttons
+            label={'Button'}
+            disabled={false}
+            height={48}
+            width={140}
+            icon={'Notification'}
+            alignCenter={true}
+            iconRight={true}
+            bgColor={tokens.color.primaryColor}
+            color={tokens.color.defaultWhite}
+            style={{
+              borderRadius: tokens.radius.full,
+              borderColor: tokens.color.primaryColor,
+            }}
         />
 
-        <Buttons
-          label={'Button'}
-          disabled={true}
-          height={48}
-          width={'auto'}
-          style={{
-            borderRadius: tokens.radius.full,
-            borderColor: tokens.color.disabledColor,
-          }}
+          <Buttons
+            label={'Button'}
+            disabled={false}
+            height={48}
+            width={140}
+            icon={'Notification'}
+            alignCenter={true}
+            iconRight={false}
+            bgColor={tokens.color.primaryColor}
+            color={tokens.color.defaultWhite}
+            style={{
+              borderRadius: tokens.radius.full,
+              borderColor: tokens.color.primaryColor,
+            }}
         />
 
-        <Buttons
-          label={'Button'}
-          disabled={false}
-          height={48}
-          width={'auto'}
-          icon={'Notification'}
-          iconRight={false}
-          bgColor={tokens.color.primaryColor}
-          color={tokens.color.defaultWhite}
-          style={{
-            borderRadius: tokens.radius.full,
-            borderColor: tokens.color.disabledColor,
-          }}
+
+          <Buttons
+            label={'Button'}
+            disabled={false}
+            height={48}
+            width={115}
+            // icon={'Notification'}
+            alignCenter={true}
+            iconRight={true}
+            bgColor={tokens.color.purpleColor}
+            color={tokens.color.primaryColor}
+            style={{
+              borderRadius: tokens.radius.full,
+              borderColor: tokens.color.purpleColor,
+            }}
         />
 
-        <Buttons
-          label={'Button'}
-          disabled={false}
-          height={48}
-          width={'auto'}
-          icon={'Notification'}
-          iconRight={false}
-          bgColor={'transparent'}
-          color={tokens.color.primaryColor}
-          style={{
-            borderRadius: tokens.radius.full,
-            borderColor: tokens.color.primaryColor,
-          }}
+          <Buttons
+            label={'Button'}
+            disabled={false}
+            height={48}
+            width={140}
+            icon={'Notification'}
+            alignCenter={true}
+            iconRight={true}
+            bgColor={tokens.color.purpleColor}
+            color={tokens.color.primaryColor}
+            style={{
+              borderRadius: tokens.radius.full,
+              borderColor: tokens.color.purpleColor,
+            }}
         />
 
-        <Buttons
-          label={'Button'}
-          disabled={false}
-          height={48}
-          width={'auto'}
-          icon={'Notification'}
-          iconRight={true}
-          bgColor={tokens.color.primaryColor}
-          color={tokens.color.defaultWhite}
-          style={{
-            borderRadius: tokens.radius.full,
-            borderColor: tokens.color.primaryColor,
-          }}
+          <Buttons
+            label={'Button'}
+            disabled={false}
+            height={48}
+            width={140}
+            icon={'Notification'}
+            alignCenter={true}
+            iconRight={false}
+            bgColor={tokens.color.purpleColor}
+            color={tokens.color.primaryColor}
+            style={{
+              borderRadius: tokens.radius.full,
+              borderColor: tokens.color.purpleColor,
+            }}
         />
 
-        <Buttons
-          label={'Button'}
-          disabled={false}
-          height={48}
-          width={'auto'}
-          icon={'Notification'}
-          alignCenter={true}
-          bgColor={tokens.color.primaryColor}
-          color={tokens.color.defaultWhite}
-          style={{
-            borderRadius: tokens.radius.full,
-            borderColor: tokens.color.primaryColor,
-          }}
-        />
 
         <Buttons
-          label={'Button'}
-          disabled={false}
-          height={48}
-          width={'auto'}
-          // icon={'Notification'}
-          bgColor={'transparent'}
-          color={tokens.color.primaryColor}
-          style={{
-            borderRadius: tokens.radius.full,
-            borderColor: 'transparent',
-          }}
+            label={'Button'}
+            disabled={false}
+            height={32}
+            width={90}
+            // icon={'Notification'}
+            alignCenter={true}
+            iconRight={true}
+            bgColor={tokens.color.primaryColor}
+            color={tokens.color.defaultWhite}
+            style={{
+              borderRadius: tokens.radius.full,
+              borderColor: tokens.color.primaryColor,
+            }}
         />
 
-        <Buttons
-          label={'Button'}
-          disabled={false}
-          height={48}
-          width={'auto'}
-          // icon={'Notification'}
-          bgColor={tokens.color.secondaryColor}
-          color={tokens.color.defaultWhite}
-          style={{
-            borderRadius: tokens.radius.sm,
-            borderColor: 'transparent'
-          }}
+          <Buttons
+            label={'Button'}
+            disabled={false}
+            height={32}
+            width={100}
+            icon={'Notification'}
+            alignCenter={true}
+            iconRight={true}
+            bgColor={tokens.color.primaryColor}
+            color={tokens.color.defaultWhite}
+            style={{
+              borderRadius: tokens.radius.full,
+              borderColor: tokens.color.primaryColor,
+            }}
         />
 
-        <Buttons
-          label={'Button'}
-          disabled={false}
-          height={48}
-          width={'auto'}
-          // icon={'Notification'}
-          bgColor={'transparent'}
-          color={tokens.color.secondaryColor}
-          style={{
-            borderRadius: tokens.radius.sm,
-            borderColor: tokens.color.secondaryColor,
-          }}
+          <Buttons
+            label={'Button'}
+            disabled={false}
+            height={32}
+            width={100}
+            icon={'Notification'}
+            alignCenter={true}
+            iconRight={false}
+            bgColor={tokens.color.primaryColor}
+            color={tokens.color.defaultWhite}
+            style={{
+              borderRadius: tokens.radius.full,
+              borderColor: tokens.color.primaryColor,
+            }}
         />
 
-        <Buttons
-          label={'Button'}
-          disabled={true}
-          height={48}
-          width={'auto'}
-          // icon={'Notification'}
-          color={tokens.color.secondaryColor}
-          style={{
-            borderRadius: tokens.radius.sm,
-            borderColor: tokens.color.disabledColor,
-          }}
-        />
-
-        <Buttons
-          label={'Button'}
-          disabled={false}
-          height={48}
-          width={'auto'}
-          icon={'Notification'}
-          alignCenter={false}
-          bgColor={tokens.color.secondaryColor}
-          color={tokens.color.defaultWhite}
-          style={{
-            borderRadius: tokens.radius.sm,
-            borderColor: tokens.color.secondaryColor,
-          }}
-        />
-
-        <Buttons
-          label={'Button'}
-          disabled={false}
-          height={48}
-          width={'auto'}
-          icon={'Notification'}
-          iconRight={true}
-          alignCenter={false}
-          bgColor={tokens.color.secondaryColor}
-          color={tokens.color.defaultWhite}
-          style={{
-            borderRadius: tokens.radius.sm,
-            borderColor: tokens.color.secondaryColor,
-          }}
-        />
-
-        <Buttons
-          label={'Button'}
-          disabled={false}
-          height={48}
-          width={'auto'}
-          icon={'Notification'}
-          alignCenter={true}
-          bgColor={tokens.color.secondaryColor}
-          color={tokens.color.defaultWhite}
-          style={{
-            borderRadius: tokens.radius.sm,
-            borderColor: tokens.color.secondaryColor,
-          }}
-        />
-
-              
-      
-      </YStack>
-
-    </ScrollView>
 
 
+
+
+
+        </YStack>
+
+
+    
+
+
+      </ScrollView>
     </TamaguiProvider>
   );
 }

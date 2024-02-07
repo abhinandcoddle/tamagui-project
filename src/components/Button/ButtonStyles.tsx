@@ -29,9 +29,12 @@ export default StyleSheet.create({
   },
   alignCenter: {
     display: 'flex',
-    flexDirection: 'row-reverse',
+    // flexDirection: 'row-reverse',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    // justifyContent: 'space-between',
     minWidth: 70,
+  },
+  btnSmStyle : {
+    fontSize: 16,
   },
 });
