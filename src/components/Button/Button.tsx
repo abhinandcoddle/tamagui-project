@@ -5,6 +5,7 @@ import {icons} from '../../themeConfig/icons';
 import {TouchableOpacity} from 'react-native';
 import {tokens} from '../../../tamagui.config';
 import CircleIcon from '../../assets/icons/Circle';
+import Fonts from '../../utils/Fonts';
 
 type PropsType = {
   color?: any;
@@ -45,16 +46,13 @@ export const Buttons = (props: PropsType) => {
             <Text
               style={styles.buttonTextCenter}
               fontSize={props.size}
+              fontFamily={Fonts.Inter700}
               color={props.disabled ? tokens.color.grayColor : props.color}>
               {props.label}
             </Text>
           )}
           {props.icon && (
-            <View
-              // style={
-              //   props.iconRight ? styles.iconStackRights : styles.iconStackCenter
-              // }
-              >
+            <View>
               {/* <Icon/> */}
               <CircleIcon />
             </View>

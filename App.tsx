@@ -1,6 +1,14 @@
 import React from 'react';
 import config, {tokens} from './tamagui.config';
-import {Button, ScrollView, TamaguiProvider, XStack, YStack} from 'tamagui';
+import {
+  Button,
+  ScrollView,
+  Switch,
+  TamaguiProvider,
+  XStack,
+  YStack,
+  Text,
+} from 'tamagui';
 import {StatusBar} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {ToastProvider} from '@tamagui/toast';
@@ -9,6 +17,7 @@ import HomeScreen from './src/screens/Home/HomeScreen';
 import SearchScreen from './src/screens/SearchScreen/SearchScreen';
 import TestingScreen from './src/screens/TestingScreen';
 import LoginScreen from './src/screens/LoginScreen/LoginScreen';
+import {SwitchWithLabel} from './src/components/Switch/Switch';
 
 import {Buttons} from './src/components/Button/Button';
 import {
@@ -248,8 +257,7 @@ export default function App() {
             }}
           />
 
-
-          <XStack justifyContent='space-between'>
+          <XStack justifyContent="space-between">
             <SmallButton
               maxWidth={82}
               height={48}
@@ -286,9 +294,6 @@ export default function App() {
             />
           </XStack>
 
-
-
-
           <Buttons
             label={'Button'}
             disabled={false}
@@ -303,7 +308,7 @@ export default function App() {
               borderRadius: tokens.radius.full,
               borderColor: tokens.color.primaryColor,
             }}
-        />
+          />
 
           <Buttons
             label={'Button'}
@@ -319,7 +324,7 @@ export default function App() {
               borderRadius: tokens.radius.full,
               borderColor: tokens.color.primaryColor,
             }}
-        />
+          />
 
           <Buttons
             label={'Button'}
@@ -335,8 +340,7 @@ export default function App() {
               borderRadius: tokens.radius.full,
               borderColor: tokens.color.primaryColor,
             }}
-        />
-
+          />
 
           <Buttons
             label={'Button'}
@@ -352,7 +356,7 @@ export default function App() {
               borderRadius: tokens.radius.full,
               borderColor: tokens.color.purpleColor,
             }}
-        />
+          />
 
           <Buttons
             label={'Button'}
@@ -368,7 +372,7 @@ export default function App() {
               borderRadius: tokens.radius.full,
               borderColor: tokens.color.purpleColor,
             }}
-        />
+          />
 
           <Buttons
             label={'Button'}
@@ -384,10 +388,9 @@ export default function App() {
               borderRadius: tokens.radius.full,
               borderColor: tokens.color.purpleColor,
             }}
-        />
+          />
 
-
-        <Buttons
+          <Buttons
             label={'Button'}
             disabled={false}
             height={32}
@@ -401,7 +404,7 @@ export default function App() {
               borderRadius: tokens.radius.full,
               borderColor: tokens.color.primaryColor,
             }}
-        />
+          />
 
           <Buttons
             label={'Button'}
@@ -417,35 +420,75 @@ export default function App() {
               borderRadius: tokens.radius.full,
               borderColor: tokens.color.primaryColor,
             }}
-        />
+          />
 
-          <Buttons
-            label={'Button'}
-            disabled={false}
-            height={32}
-            width={100}
-            icon={'Notification'}
-            alignCenter={true}
-            iconRight={false}
-            bgColor={tokens.color.primaryColor}
-            color={tokens.color.defaultWhite}
-            style={{
-              borderRadius: tokens.radius.full,
-              borderColor: tokens.color.primaryColor,
-            }}
-        />
+          <XStack gap="$3" $xs={{flexDirection: 'column'}}>
+            <SwitchWithLabel
+              displaySwitch={false}
+              size="$4"
+              title="Title"
+              defaultChecked
+              width={54}
+              bgColor={tokens.color.successColor}
+            />
+            <SwitchWithLabel
+              displaySwitch={true}
+              size="$4"
+              title="Title"
+              defaultChecked
+              width={54}
+              bgColor={tokens.color.successColor}
+            />
+            <SwitchWithLabel
+              displaySwitch={true}
+              size="$4"
+              title="Title"
+              defaultChecked
+              width={54}
+              bgColor={tokens.color.successColor}
+              value={"Value"}
+              image={true}
+            />
 
+            <SwitchWithLabel
+              displaySwitch={true}
+              size="$1"
+              title="Label"
+              width={26}
+              defaultChecked
+              bgColor={tokens.color.successColor}
+              value={"Value"}
+              image={false}
+              labelRight={true}
+            />
 
+            <SwitchWithLabel
+              displaySwitch={true}
+              size="$4"
+              title="Remember me"
+              defaultChecked
+              width={54}
+              bgColor={tokens.color.primaryColor}
+              value={"Value"}
+              image={false}
+              labelRight={true}
+            />
 
+            <SwitchWithLabel
+              displaySwitch={true}
+              size="$4"
+              title="Accept terms and conditions"
+              titleColor={'#4B2697'}
+              defaultChecked
+              width={54}
+              bgColor={tokens.color.primaryColor}
+              value={"Value"}
+              image={false}
+              labelRight={false}
+            />
 
-
-
+          </XStack>
         </YStack>
-
-
-    
-
-
       </ScrollView>
     </TamaguiProvider>
   );

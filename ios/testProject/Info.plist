@@ -55,6 +55,10 @@
 	<array>
 		<string>AvertaStandard-Regular.ttf</string>
 		<string>Averta-Bold.ttf</string>
+		<string>InterBold.ttf</string>
+		<string>InterMedium.ttf</string>
+		<string>InterRegular.ttf</string>
+		<string>InterSemiBold.ttf</string>
 	</array>
 </dict>
 </plist>
